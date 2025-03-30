@@ -82,8 +82,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/pawtograder-social-card.jpg',
+    image: 'img/pawtograder-social-card.png',
     navbar: {
       title: 'Pawtograder',
       logo: {
