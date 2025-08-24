@@ -5,6 +5,8 @@ title: Creating and Managing Rubrics
 
 This guide explains how rubrics drive the hand‑grading experience and how scores are computed. It also includes copy‑pasteable YAML examples for each configuration option.
 
+Rubrics can only be edited by instructors.
+
 ## High‑level overview
 - **Rubric**: Named collection of parts used for a specific review round (self‑review, grading‑review, meta‑grading‑review). The grading review is the main review that students will see.
 - **Part**: Logical section within a rubric (e.g., Code Quality, Functionality). Contains criteria.

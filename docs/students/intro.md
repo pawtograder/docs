@@ -11,6 +11,7 @@ Student enrollments are automatically managed by course registration systems. If
 <img src={require('./assets/intro-1754508479463.png').default} alt="alt text" style={{maxWidth: '200px'}} />
 
 If your course does not show up after logging in, you may need to contact your instructor to ensure that you are enrolled in the course.
+Enrollments are automatically synchronized with the course registration system every hour.
 
 ## Connecting to GitHub
 The very first step is to connect your GitHub account to Pawtograder. Pawtograder will automatically create repositories for your assignments, using the pawtograder-playground github.com organization.
