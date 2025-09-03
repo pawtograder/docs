@@ -1,5 +1,6 @@
 ---
 title: Creating and Managing Rubrics
+sidebar_position: 2
 ---
 ### Rubrics: Instructor Guide
 

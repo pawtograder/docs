@@ -1,5 +1,6 @@
 ---
-title: Grading Assignments
+title: Assigning Grading Tasks
+sidebar_position: 5
 ---
 
 Pawtograder has a robust feature to allow instructors to assign grading tasks to staff. When a grading task is assigned, the instructor can set a due date for that task, and re-assign the task to a different grader if needed. Pawtograder will also automatically allow any other grader to complete the task if the original grader is unable to complete it (without needing to re-assign the task).

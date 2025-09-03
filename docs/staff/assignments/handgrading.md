@@ -1,5 +1,6 @@
 --- 
 title: Handgrading 
+sidebar_position: 4
 ---
 
 Instructors can define multiple handgrading rubrics for each assignment, although the most typical mechanism is to simply use the "Grading Rubric" (which, combined with the autograder score, is used to compute the score for each submission).
