@@ -52,6 +52,7 @@ weighted_score
 #### `gradebook_columns("slug-pattern")`
 Retrieves gradebook column data with glob pattern matching. Returns objects with:
 - `score`: `number | null` - The student's score (including overrides)
+- `max_score`: `number` - The maximum score for the column
 - `is_missing`: `boolean` - Whether the grade is missing/not entered
 - `is_excused`: `boolean` - Whether the student is excused from this item
 - `is_droppable`: `boolean` - Whether this item can be dropped in calculations
