@@ -10,7 +10,7 @@ PawtoGrader's surveys feature enables instructors to collect structured feedback
 
 Navigate to **Surveys** in the course navigation menu to access the survey management dashboard.
 
-![Survey Dashboard, Instructor View](./survey-dashboard.png)
+![Survey Dashboard, Instructor View](assets/survey-dashboard.png)
 
 The survey dashboard displays all surveys for your course with key information:
 
@@ -33,7 +33,7 @@ The survey dashboard displays all surveys for your course with key information:
 7. Choose the due date and whether allow students to edit their responses after submission
 8. Preview the survey if needed, otherwise click **Save Survey**
 
-![Survey Visual Builder](./survey-visual-builder.png)
+![Survey Visual Builder](assets/survey-visual-builder.png)
 
 ### Using the Template Library
 
@@ -49,7 +49,7 @@ Save time by starting with a pre-built survey template:
 5. Click **Clone** to create a new survey with the template's questions pre-filled
 6. Customize as needed and publish
 
-![Template Library Modal](./survey-template-library.png)
+![Template Library Modal](assets/survey-template-library.png)
 
 **Template Scopes:**
 
@@ -77,7 +77,7 @@ The visual builder uses SurveyJS, providing access to a wide variety of question
 5. Mark questions as required using the toggle
 6. Click the arrows on the top right to reorder questions
 7. If needed, click **Add Page** to insert a new page
-7. Click **Use This Survey** button to use the JSON you generated
+8. Click **Use This Survey** button to use the JSON you generated
 
 ### Survey JSON Editor
 
@@ -137,7 +137,7 @@ Toggle **Allow Response Editing** to control whether students can modify their s
 
 Click **View Responses** on any published survey to see the response dashboard.
 
-![Survey Response Dashboard](./survey-response-dashboard.png)
+![Survey Response Dashboard](assets/survey-response-dashboard.png)
 
 The dashboard displays three key metrics at the top:
 
