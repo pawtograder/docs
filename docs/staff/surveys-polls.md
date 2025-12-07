@@ -1,10 +1,13 @@
 ---
-title: Surveys (Instructor Guide)
-
+title: Surveys and Polls
 sidebar_position: 3
 ---
 
-PawtoGrader's surveys feature enables instructors to collect structured feedback from students about courses, assignments, teaching methods, and more. Create custom surveys, track response rates in real-time, and export data for analysis.
+PawtoGrader's surveys and polls feature enables instructors to collect structured feedback from students about courses, assignments, teaching methods, and more. Create custom surveys, track response rates in real-time, and export data for analysis. Use polls for quick questions during class to check understanding and gather instant responses.
+
+# Surveys
+
+Create custom surveys, track response rates in real-time, and export data for analysis.
 
 ## Accessing Survey Management
 
@@ -299,3 +302,56 @@ To remove a survey from your course:
 3. Survey and all associated response data are permanently deleted
 
 **Warning**: Deletion is permanent and cannot be undone. Export response data before deleting if you need to retain it.
+
+# Polls
+
+Create polls for checking understanding, gathering instant feedback, or engaging students during lectures.
+
+![Polls Dashboard, Instructor View](assets/poll-manage.png)
+
+## Creating a Poll
+
+1. Navigate to **Polls** in the course navigation menu
+2. Click the **Create a New Poll** button
+
+![Polls Creation Page](assets/poll-create.png)
+
+3. Click the **Open Visual Builder** button and enter your poll question
+
+![Polls Visual Builder](assets/poll-builder.png)
+
+4. Choose your question type and add answer choices
+   - A poll question can be either multiple choice or single choice
+5. Click **Use This Poll** button
+6. Validate JSON or Preview Poll if needed
+7. Optionally, select **Require login to respond** to restrict poll access to logged-in students only
+8. Click **Publish Poll** to make it live immediately
+
+Once published, the poll becomes visible to all students in your course.
+
+## Viewing Poll Results
+
+While a poll is active, you can view responses in real-time:
+
+1. Click on the actions button and select **View Poll**
+2. View the number of responses for each answer choice
+3. Watch results update live as students submit answers
+4. Click **Present** to display results in full screen mode
+
+## Closing a Poll
+
+When you're ready to stop accepting responses, click **Stop Poll** in the results page, or navigate to the manage polls page and click the **Close Poll** in actions button.
+
+Once closed:
+
+- Students can no longer submit responses
+- Final results are saved and remain viewable
+- You can reopen the poll later if needed
+
+## Deleting a Poll
+
+Click **Delete Poll** button to delete the poll and confirm your choice. Please note that Deleting a poll is different from closing one.
+
+![Deleting a Poll](assets/poll-delete.png)
+
+**Warning**: Deleting a poll will result in the permanent loss of all responses from students. This action cannot be undone.

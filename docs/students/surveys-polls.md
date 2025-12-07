@@ -1,5 +1,5 @@
 ---
-title: Surveys
+title: Surveys and Polls
 sidebar_position: 3
 ---
 
