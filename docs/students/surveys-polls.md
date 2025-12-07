@@ -45,7 +45,7 @@ For completed surveys, click the **View Submission** button on the survey card t
 
 If editing is allowed, you can modify and resubmit from this page.
 
-# Polling
+# Polls
 
 ## Accessing Polls
 
