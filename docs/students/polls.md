@@ -28,7 +28,7 @@ You can also access polls directly from Pawtograder:
 3. Live polls from your class will be displayed
 4. Select your answer(s) and submit
 
-<!-- TODO: Add screenshot of student polls page -->
+![Screenshot of the polls page showing available live polls](assets/student-polling.png)
 
 ## Login Requirements
 

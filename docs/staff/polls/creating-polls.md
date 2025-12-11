@@ -9,20 +9,27 @@ Creating a poll in Pawtograder is designed to be quick and straightforward, allo
 
 1. Navigate to the "Polls" section in your course
 2. Click the "Create Poll" button
-3. Enter your poll question
+
+![Polls Creation Page](assets/poll-create.png)
+
+3. Click the **Open Visual Builder** button and enter your poll question
+
+![Polls Visual Builder](assets/poll-builder.png)
+
 4. Select the poll type (see [Poll Types](./poll-types.md) for options)
 5. Configure the answer options based on your selected poll type
-6. Click "Create" to launch the poll
-
-<!-- TODO: Add screenshot of poll creation form -->
+6. Click **Use This Poll** button
+7. Validate JSON or Preview Poll if needed
+8. Optionally, select **Require login to respond** to restrict poll access to logged-in students only
+9. Click **Publish Poll** to make it live immediately
 
 ## Poll Settings
 
 When creating a poll, you can configure the following:
 
-- **Question Text**: The question or prompt displayed to students
-- **Poll Type**: The format of responses (single choice or multiple choice)
-- **Answer Options**: The available response options for students to choose from
+- **Question Prompt**: The question or prompt displayed to students
+- **Question Type**: The format of responses (single choice or multiple choice)
+- **Choices**: The available response options for students to choose from
 - **Require Login**: When enabled, students must be logged in to Pawtograder to respond to the poll. When disabled, anyone with access to the poll can respond anonymously.
 
 :::tip
@@ -39,6 +46,14 @@ Polls automatically close **one hour** after creation. This ensures that:
 :::tip
 If you need to close a poll before the one-hour timeout, you can manually close it at any time from the poll management view.
 :::
+
+## Deleting a Poll
+
+Click **Delete Poll** button to delete the poll and confirm your choice. Please note that Deleting a poll is different from closing one.
+
+![Deleting a Poll](assets/poll-delete.png)
+
+**Warning**: Deleting a poll will result in the permanent loss of all responses from students. This action cannot be undone.
 
 ## Best Practices
 
