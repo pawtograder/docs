@@ -1,5 +1,5 @@
 ---
-title: Surveys and Polls
+title: Surveys
 sidebar_position: 3
 ---
 
@@ -44,15 +44,3 @@ Note: Not all surveys allow editing after submission. Check for the editing noti
 For completed surveys, click the **View Submission** button on the survey card to review your submitted responses.
 
 If editing is allowed, you can modify and resubmit from this page.
-
-# Polls
-
-## Accessing Polls
-
-Navigate to the **Polls** tab in the main navigation menu to see available live polls from your course.
-
-![Screenshot of the polls page showing available live polls](assets/student-polling.png)
-
-## Answer a Poll
-
-To answer a poll, simply click the green **Answer Poll** button. Complete the question and submit your response. You can close the tab once you're done, or refresh the page if you want to answer the poll again.

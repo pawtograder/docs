@@ -5,6 +5,7 @@ sidebar_position: 4
 
 Polls are a quick and easy way to answer questions during class. Your instructor may use polls to check understanding, gather feedback, or spark discussion.
 
+
 ## Answering Polls
 
 There are two ways to respond to a poll:
@@ -28,7 +29,7 @@ You can also access polls directly from Pawtograder:
 3. Live polls from your class will be displayed
 4. Select your answer(s) and submit
 
-<!-- TODO: Add screenshot of student polls page -->
+![Screenshot of the polls page showing available live polls](assets/student-polling.png)
 
 ## Login Requirements
 
