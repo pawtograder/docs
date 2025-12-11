@@ -5,7 +5,6 @@ sidebar_position: 4
 
 Polls are a quick and easy way to answer questions during class. Your instructor may use polls to check understanding, gather feedback, or spark discussion.
 
-
 ## Answering Polls
 
 There are two ways to respond to a poll:
