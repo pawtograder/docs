@@ -235,7 +235,7 @@ Shows the current number of submitted responses.
 
 Percentage of enrolled students who have submitted responses. Calculated as:
 
-```
+```text
 Response Rate = (Total Responses / Total Enrolled Students) × 100
 ```
 
@@ -301,7 +301,7 @@ Click **Export to CSV** to download all response data for external analysis.
 
 **CSV Format:**
 
-```
+```csv
 Student Name,Submitted At,Question 1,Question 2,...
 Jane Doe,"Nov 15, 2025, 3:45 PM",Answer 1,Answer 2,...
 John Smith,"Nov 16, 2025, 10:22 AM",Answer 1,Answer 2,...
