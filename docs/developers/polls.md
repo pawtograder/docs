@@ -111,6 +111,71 @@ CREATE TABLE live_poll_responses (
 - Unique constraint ensures one response per user per poll
 - Auto-sets `submitted_at` timestamp via trigger
 
+### Anonymous Response Behavior
+
+**⚠️ CRITICAL: The UNIQUE constraint does not prevent duplicate anonymous responses.**
+
+The constraint `UNIQUE (live_poll_id, public_profile_id)` enforces one response per authenticated user, but due to PostgreSQL's NULL handling, **anonymous users (where `public_profile_id` is NULL) can submit unlimited responses to the same poll**.
+
+#### Current Behavior by User Type:
+
+| User Type | Deduplication | Behavior |
+|-----------|--------------|----------|
+| **Authenticated** (`require_login = true`) | ✅ Enforced by UNIQUE constraint | One response per user per poll |
+| **Anonymous** (`require_login = false`) | ❌ Not enforced | Unlimited responses allowed |
+
+#### Why This Happens:
+In PostgreSQL, NULL values in UNIQUE constraints are considered distinct from each other. Multiple rows with `(live_poll_id, NULL)` are all valid and don't violate the constraint.
+
+#### Current Mitigations:
+- **None at application level**: No client-side tracking, rate limiting, or session-based restrictions
+- **No server-side deduplication**: Anonymous responses go directly to the database without checks
+
+#### Design Decision:
+Anonymous responses are intentionally allowed (see RLS policy comments), but **unlimited anonymous responses appear to be an unintended consequence** rather than a deliberate feature.
+
+#### Potential Solutions (if limiting is desired):
+
+1. **Require Login for Sensitive Polls**
+   - Set `require_login = true` for polls where single-response is critical
+   - Trade-off: Eliminates anonymous participation
+
+2. **Client-Side Session Tracking** (weak mitigation)
+```typescript
+   // Store in sessionStorage after submission
+   sessionStorage.setItem(`poll-${pollId}-submitted`, 'true');
+   // Check before allowing submission
+   if (sessionStorage.getItem(`poll-${pollId}-submitted`)) {
+     // Show "already submitted" message
+   }
+```
+   - ⚠️ Easily bypassed (incognito mode, clearing storage)
+
+3. **Add Anonymous Session Identifier** (requires schema change)
+```sql
+   ALTER TABLE live_poll_responses 
+   ADD COLUMN anonymous_session_id UUID;
+   
+   CREATE UNIQUE INDEX live_poll_responses_anonymous_unique
+   ON live_poll_responses (live_poll_id, COALESCE(public_profile_id, anonymous_session_id));
+```
+   - Generate session ID client-side and store in sessionStorage
+   - More robust than option 2 but still bypassable
+
+4. **Server-Side Rate Limiting** (requires additional infrastructure)
+   - Track submissions by IP address or request fingerprinting
+   - Implement time-based or count-based limits
+   - Most robust but adds complexity
+
+#### Recommendation:
+- **For public/informal polls**: Accept unlimited anonymous responses as a trade-off for accessibility
+- **For critical polls** (grades, official votes): Use `require_login = true`
+- Document this behavior clearly in the UI when creating polls
+
+#### Related Files:
+- Response submission: `app/poll/[course_id]/page.tsx` (lines 122-148)
+- RLS policies: `supabase/migrations/20251204070101_live-polls.sql` (lines 324-357)
+
 ### Database Triggers
 
 | Trigger | Table | Purpose |
