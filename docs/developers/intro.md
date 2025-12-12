@@ -68,5 +68,3 @@ Users have both public and private profiles per course:
 3. Make your changes
 4. Run tests: `npm test` and `npx playwright test`
 5. Submit a pull request
-
-See the [Contributing Guide](https://github.com/pawtograder/platform/blob/main/CONTRIBUTING.md) for detailed guidelines.

@@ -312,5 +312,4 @@ The dev server uses a self-signed certificate. This is expected:
 ## Next Steps
 
 - Read the [Surveys Developer Guide](./surveys.md) for feature-specific documentation
-- Check the [Contributing Guide](https://github.com/pawtograder/platform/blob/main/CONTRIBUTING.md) for code standards
 - Join the development discussion on GitHub Issues
