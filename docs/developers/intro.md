@@ -29,7 +29,7 @@ Pawtograder is built with modern web technologies:
 
 ## Repository Structure
 
-```
+```text
 platform/
 ├── app/                    # Next.js app router pages
 ├── components/             # Reusable React components
@@ -43,7 +43,7 @@ platform/
 
 ## Key Concepts
 
-### Row Level Security (RLS)
+### Row-Level Security (RLS)
 
 Pawtograder uses Supabase's Row Level Security to enforce access control at the database level. Each table has policies that determine what data users can read, create, update, or delete based on their role.
 

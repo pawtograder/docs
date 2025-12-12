@@ -115,7 +115,7 @@ $$ LANGUAGE plpgsql SECURITY DEFINER;
 SELECT cron.schedule('deactivate-expired-polls', '0 * * * *', 'SELECT deactivate_expired_polls()');
 ```
 
-## Row Level Security (RLS)
+## Row-Level Security (RLS)
 
 ### Poll Policies
 
@@ -184,7 +184,7 @@ export type PollResponseData = Record<string, string | string[]>;
 
 ## File Structure
 
-```
+```text
 app/course/[course_id]/
 ├── polls/                              # Student-facing
 │   └── page.tsx                        # List of active polls
