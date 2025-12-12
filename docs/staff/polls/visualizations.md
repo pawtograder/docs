@@ -11,7 +11,7 @@ After creating a poll, you can view results in real-time as students respond. Th
 - Total number of responses
 - A bar chart visualization of responses
 
-<!-- TODO: Add screenshot of poll results view -->
+![Polls Results](assets/poll-results.png)
 
 ## Bar Chart Visualization
 
@@ -20,8 +20,6 @@ Both single choice and multiple choice polls display results as a bar chart:
 - Bar length corresponds to the number of responses
 - Percentages are displayed alongside counts
 - Updates in real-time as new responses come in
-
-<!-- TODO: Add screenshot of bar chart visualization -->
 
 ## QR Code Access
 
@@ -32,8 +30,6 @@ Each class has a unique QR code that allows students to quickly access and respo
 - **Class-Specific**: The QR code is tied to your specific class
 - **Latest Poll Only**: The QR code always directs students to the **newest active poll** for the class
 - **Click to Enlarge**: Click on the QR code to enlarge it for easy projection to the class
-
-<!-- TODO: Add screenshot of QR code -->
 
 ### Using the QR Code in Class
 
