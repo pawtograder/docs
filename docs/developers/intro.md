@@ -13,6 +13,7 @@ This guide will help you understand and contribute to the Pawtograder project. L
 ## Feature Documentation
 
 - **[Surveys](./surveys.md)** - Database schema, API, and implementation details for the survey system
+- **[Polls](./polls.md)** - Real-time polling system architecture, database schema, and hooks
 
 ## Tech Stack
 
