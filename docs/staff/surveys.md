@@ -217,6 +217,56 @@ Use specific student assignment for:
 - Pilot testing a survey before wider release
 :::
 
+## Peer Feedback Surveys
+
+Peer feedback surveys allow students to provide constructive feedback about their teammates in group projects. A pre-built **Peer Feedback Survey** template is available in the Template Library.
+
+### Current Implementation
+
+Peer feedback surveys use the **Assign to specific students** assignment mode. The instructor assigns the survey to students who need to provide feedback, and responses are collected like any other survey.
+
+:::note
+The current implementation does not include automated peer-to-peer assignment (e.g., automatically assigning Student A to review Student B). Instructors manually assign surveys to students who should provide feedback. Future versions may include automated peer assignment features.
+:::
+
+### Peer Feedback Template Structure
+
+The built-in peer feedback template includes the following questions that can be customized for your course:
+
+**Rating Questions (1-5 scale):**
+- Overall contribution to the project
+- Communication effectiveness with the group
+- Reliability in completing assigned tasks on time
+- Collaboration and supportiveness
+- Quality of work produced
+
+**Multi-Select Question:**
+- Team member strengths (Technical skills, Problem-solving, Communication, Leadership, Time management, Creativity, Attention to detail, Helping others)
+
+**Open-Ended Questions:**
+- What did this team member do well?
+- What could this team member improve on?
+- Additional comments (optional)
+
+### Using the Peer Feedback Template
+
+1. Click **Create New Survey**
+2. Click **Load Template**
+3. Search for "Peer Feedback Survey"
+4. Click **Clone** to use the template
+5. Customize questions as needed for your course context
+6. Use **Assign to specific students** to assign to group members
+7. Publish when ready
+
+### Viewing Peer Feedback Responses
+
+Peer feedback responses are visible only to instructors and graders. Students can only see their own submitted responses, not feedback others have provided.
+
+To review peer feedback:
+1. Navigate to the survey's **View Responses** page
+2. Use filters to focus on specific questions or date ranges
+3. Export to CSV for detailed analysis or grade calculations
+
 ## Managing Survey Responses
 
 ### Viewing Response Dashboard
