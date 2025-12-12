@@ -63,6 +63,32 @@ CREATE TABLE live_polls (
 - `require_login`: Whether anonymous responses are allowed
 - `created_by`: Instructor/grader who created the poll (auto-set via trigger)
 
+**⚠️ Note on `question` column:**
+While the schema default is `'[]'::jsonb` (empty array), the application always stores **objects** in SurveyJS format with an `elements` property, never plain arrays. All poll creation code provides explicit values, so the default is not used in practice.
+
+**Actual stored format:**
+```json
+{
+  "elements": [
+    {
+      "type": "checkbox",
+      "title": "Which topic should we review next?",
+      "choices": ["Recursion", "Dynamic Programming", "Graphs"]
+    }
+  ]
+}
+```
+
+**Display format (UI only):**
+When rendered in the poll interface, this is wrapped in a `pages` structure for SurveyJS display:
+```json
+{
+  "pages": [{
+    "elements": [...]
+  }]
+}
+```
+
 #### `live_poll_responses`
 
 Stores individual student responses.
