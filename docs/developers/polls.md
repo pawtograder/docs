@@ -141,24 +141,24 @@ Anonymous responses are intentionally allowed (see RLS policy comments), but **u
    - Trade-off: Eliminates anonymous participation
 
 2. **Client-Side Session Tracking** (weak mitigation)
-```typescript
+   ```typescript
    // Store in sessionStorage after submission
    sessionStorage.setItem(`poll-${pollId}-submitted`, 'true');
    // Check before allowing submission
    if (sessionStorage.getItem(`poll-${pollId}-submitted`)) {
      // Show "already submitted" message
    }
-```
+   ```
    - ⚠️ Easily bypassed (incognito mode, clearing storage)
 
 3. **Add Anonymous Session Identifier** (requires schema change)
-```sql
+   ```sql
    ALTER TABLE live_poll_responses 
    ADD COLUMN anonymous_session_id UUID;
    
    CREATE UNIQUE INDEX live_poll_responses_anonymous_unique
    ON live_poll_responses (live_poll_id, COALESCE(public_profile_id, anonymous_session_id));
-```
+   ```
    - Generate session ID client-side and store in sessionStorage
    - More robust than option 2 but still bypassable
 
