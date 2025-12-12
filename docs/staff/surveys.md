@@ -146,14 +146,14 @@ Always preview your survey before publishing to catch any formatting issues or u
 
 ### Status Options
 
-**Draft**
+#### Draft
 
 - Survey is not visible to students
 - Allows you to work on the survey without time pressure
 - No responses can be submitted
 - Can be edited freely without affecting existing data
 
-**Published**
+#### Published
 
 - Survey becomes visible to students immediately
 - Students can begin submitting responses
@@ -168,7 +168,7 @@ Always preview your survey before publishing to catch any formatting issues or u
 4. Students see a countdown timer showing time remaining
 5. After the due date passes, students can no longer submit responses
 
-**Due Date Display:**
+#### Due Date Display:
 
 - Red "Closed" indicator when past due
 - Orange warning when less than 24 hours remain
@@ -178,13 +178,13 @@ Always preview your survey before publishing to catch any formatting issues or u
 
 Toggle **Allow Response Editing** to control whether students can modify their submissions after initial submission.
 
-**Enabled**
+#### Enabled
 
 - Students see an edit notification when taking the survey
 - "View Submission" button changes to allow editing
 - Timestamp updates to show last modification time
 
-**Disabled**
+#### Disabled
 
 - Students cannot change responses after submitting
 - Original submission timestamp preserved
@@ -301,7 +301,7 @@ Click **Export to CSV** to download all response data for external analysis.
 
 **CSV Format:**
 
-```csv
+```
 Student Name,Submitted At,Question 1,Question 2,...
 Jane Doe,"Nov 15, 2025, 3:45 PM",Answer 1,Answer 2,...
 John Smith,"Nov 16, 2025, 10:22 AM",Answer 1,Answer 2,...
