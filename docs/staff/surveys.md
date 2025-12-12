@@ -73,18 +73,74 @@ The visual builder uses SurveyJS, providing access to a wide variety of question
 
 ### Building Your Survey
 
-1. Name the page if needed
-2. Select the question type from the dropdown
-3. Enter the question name
-4. Configure question-specific options (description, choices, etc.)
-5. Mark questions as required using the toggle
-6. Click the arrows on the top right to reorder questions
-7. If needed, click **Add Page** to insert a new page
-8. Click **Use This Survey** button to use the JSON you generated
+1. Name the page if needed (optional, helps organize multi-page surveys)
+2. Click a question type button to add a new question (+ Short Text, + Long Text, etc.)
+3. Enter the question name (this becomes the column header in response exports)
+4. Add an optional description to provide context for students
+5. Mark questions as required using the **Required** toggle
+6. For choice-based questions, add and reorder answer options
+7. Use the arrow buttons (↑ ↓) to reorder questions
+8. Click the trash icon to delete a question
+9. Click **Use This Survey** when finished
+
+### Multi-Page Surveys
+
+For longer surveys, organize questions across multiple pages:
+
+1. Click **Add Page** in the left sidebar to create a new page
+2. Name each page to help students understand their progress
+3. Use the arrow buttons to reorder pages
+4. Delete a page by clicking the trash icon (cannot delete the last remaining page)
+5. Click on any page name to switch between pages while editing
+
+Students will navigate through pages sequentially when completing the survey.
+
+:::tip
+Use multi-page surveys to:
+- Group related questions together
+- Break up long surveys into manageable sections
+- Create a logical flow through different topics
+:::
+
+### Configuring Question Options
+
+**For Single Choice and Checkboxes:**
+
+1. Click **Add choice** to add new options
+2. Enter the value for each choice
+3. Use the arrow buttons to reorder choices
+4. Click ✕ to remove a choice
+
+**For Yes / No questions:**
+
+- Customize the **True label** (default: "Yes")
+- Customize the **False label** (default: "No")
 
 ### Survey JSON Editor
 
-Advanced users may directly modify the SurveyJS configuration when creating new survey. Use the visual builder first, then fine-tune in JSON mode if needed. You can click **Validate JSON** to see if the input is valid.
+Advanced users may directly modify the SurveyJS configuration when creating a new survey. Use the visual builder first, then fine-tune in JSON mode if needed.
+
+- The JSON textarea shows the raw SurveyJS configuration
+- Click **Validate JSON** to check for syntax errors before saving
+- Changes in the Visual Builder automatically update the JSON
+
+:::note
+The JSON editor is for advanced users familiar with the [SurveyJS JSON format](https://surveyjs.io/documentation). Most users should use the Visual Builder instead.
+:::
+
+### Previewing Your Survey
+
+Before publishing, preview how students will see your survey:
+
+1. Click **Show Preview** in the preview section
+2. A modal displays the survey exactly as students will experience it
+3. Test navigation between pages (for multi-page surveys)
+4. Verify question types and options display correctly
+5. Close the preview when satisfied
+
+:::tip
+Always preview your survey before publishing to catch any formatting issues or unclear questions.
+:::
 
 ## Survey Settings
 
@@ -133,6 +189,33 @@ Toggle **Allow Response Editing** to control whether students can modify their s
 - Students cannot change responses after submitting
 - Original submission timestamp preserved
 - Ensures responses reflect immediate reactions
+
+### Survey Assignment
+
+Control which students can access and respond to your survey:
+
+**Assign to all students** (default)
+
+- All enrolled students in the course can see and respond to the survey
+- Response rate is calculated based on total enrolled students
+- Best for course-wide feedback or evaluations
+
+**Assign to specific students**
+
+1. Select **Assign to specific students** option
+2. Click **Select Students** to open the student picker
+3. Search for students by name
+4. Check the boxes next to students you want to include
+5. Click **Confirm** to save your selection
+
+The button displays the count of selected students (e.g., "Select Students (5 selected)").
+
+:::tip
+Use specific student assignment for:
+- Targeted feedback from a particular section or group
+- Follow-up surveys for students who reported issues
+- Pilot testing a survey before wider release
+:::
 
 ## Managing Survey Responses
 
