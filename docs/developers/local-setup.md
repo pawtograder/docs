@@ -14,7 +14,7 @@ Before starting, ensure you have the following installed:
 | Requirement | Version | Notes |
 |-------------|---------|-------|
 | Node.js | v22 (recommended) | Use [nvm](https://github.com/nvm-sh/nvm) for version management |
-| Docker | Latest | Required for local Supabase |
+| Docker | Latest | Required for local Supabase Can use [Docker desktop](https://www.docker.com/products/docker-desktop/) to quickly setup a docker daemon for development. |
 | Git | Latest | For cloning the repository |
 
 ## Quick Start (Staging Backend)
@@ -109,6 +109,17 @@ For development requiring database changes, RLS policy modifications, or running
 
    :::warning
    Never expose `SUPABASE_SERVICE_ROLE_KEY` to the browser or commit it to version control. Keep it in server-only code and CI secrets.
+   :::
+
+   :::note
+   In newer versions of supabase, after `supabase start`, you may see the following instead
+   ```
+   API URL: http://127.0.0.1:54321
+   Publishable key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+   Secret key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+   ```
+   The `publishable key` is the same as the `anon key`. The `secret key` is the same as the `service_role` key.
+   See [this Supabase blog post](https://supabase.com/blog/jwt-signing-keys#api-keys-to-fix-anon-and-service_role) for details on this change and its timeline.
    :::
 
 5. **Build the application**
