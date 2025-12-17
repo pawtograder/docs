@@ -14,7 +14,7 @@ Before starting, ensure you have the following installed:
 | Requirement | Version | Notes |
 |-------------|---------|-------|
 | Node.js | v22 (recommended) | Use [nvm](https://github.com/nvm-sh/nvm) for version management |
-| Docker | Latest | Required for local Supabase Can use [Docker desktop](https://www.docker.com/products/docker-desktop/) to quickly setup a docker daemon for development. |
+| Docker | Latest | Required for local Supabase. Can use [Docker desktop](https://www.docker.com/products/docker-desktop/) to quickly setup a docker daemon for development. |
 | Git | Latest | For cloning the repository |
 
 ## Quick Start (Staging Backend)
@@ -113,7 +113,7 @@ For development requiring database changes, RLS policy modifications, or running
 
    :::note
    In newer versions of supabase, after `supabase start`, you may see the following instead
-   ```
+   ```bash
    API URL: http://127.0.0.1:54321
    Publishable key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
    Secret key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
