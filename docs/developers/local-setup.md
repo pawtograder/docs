@@ -14,7 +14,7 @@ Before starting, ensure you have the following installed:
 | Requirement | Version | Notes |
 |-------------|---------|-------|
 | Node.js | v22 (recommended) | Use [nvm](https://github.com/nvm-sh/nvm) for version management |
-| Docker | Latest | Required for local Supabase |
+| Docker | Latest | Required for local Supabase. Can use [Docker desktop](https://www.docker.com/products/docker-desktop/) to quickly setup a docker daemon for development. |
 | Git | Latest | For cloning the repository |
 
 ## Quick Start (Staging Backend)
@@ -92,24 +92,54 @@ For development requiring database changes, RLS policy modifications, or running
 4. **Configure environment variables**
 
    After `supabase start`, you'll see output like:
-   ```
-   API URL: http://127.0.0.1:54321
-   anon key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
-   service_role key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
-   ```
+
+```bash
+supabase local development setup is running.
+
+╭──────────────────────────────────────╮
+│ 🔧 Development Tools                 │
+├─────────┬────────────────────────────┤
+│ Studio  │ http://127.0.0.1:54323     │
+│ Mailpit │ http://127.0.0.1:54324     │
+│ MCP     │ http://127.0.0.1:54321/mcp │
+╰─────────┴────────────────────────────╯
+
+╭─────────────────────────────────────────────────╮
+│ 🌐 APIs                                         │
+├─────────────┬───────────────────────────────────┤
+│ Project URL │ http://127.0.0.1:54321            │
+│ REST        │ http://127.0.0.1:54321/rest/v1    │
+│ GraphQL     │ http://127.0.0.1:54321/graphql/v1 │
+╰─────────────┴───────────────────────────────────╯
+
+╭───────────────────────────────────────────────────────────────╮
+│ ⛁ Database                                                    │
+├─────┬─────────────────────────────────────────────────────────┤
+│ URL │ postgresql://postgres:postgres@127.0.0.1:54322/postgres │
+╰─────┴─────────────────────────────────────────────────────────╯
+
+╭──────────────────────────────────────────────────────────────╮
+│ 🔑 Authentication Keys                                       │
+├─────────────┬────────────────────────────────────────────────┤
+│ Publishable │ sb_publishable_...                             │
+│ Secret      │ sb_secret_...                                  │
+╰─────────────┴────────────────────────────────────────────────╯
+
+```
 
    Update your `.env.local`:
    ```bash
    SUPABASE_URL=http://127.0.0.1:54321
    NEXT_PUBLIC_SUPABASE_URL=http://127.0.0.1:54321
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=<anon key from output>
-   SUPABASE_SERVICE_ROLE_KEY=<service_role key from output>
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=<publishable key from output>
+   SUPABASE_SERVICE_ROLE_KEY=<secret key from output>
    ENABLE_SIGNUPS=true
    ```
 
    :::warning
    Never expose `SUPABASE_SERVICE_ROLE_KEY` to the browser or commit it to version control. Keep it in server-only code and CI secrets.
    :::
+
 
 5. **Build the application**
    ```bash
